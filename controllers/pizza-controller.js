@@ -49,6 +49,7 @@ const pizzaController = {
 
   // update pizza by id
   updatePizza({ params, body }, res) {
+    //findByIdAndUpdate({_id:params.id},{$set:{petage:body.petage},{new:true,runValidators:true}})
     Pizza.updateOne({ _id: params.id }, body, { new: true })
       .then(dbPizzaData => {
         if (!dbPizzaData) {
