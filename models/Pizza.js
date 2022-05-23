@@ -33,6 +33,7 @@ const PizzaSchema = new Schema(
       virtuals: true,
       getters: true,
     },
+    // We set id to false because this is a virtual that Mongoose returns, and we don’t need it.
     id: false,
   }
 );
